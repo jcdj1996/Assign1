@@ -1,11 +1,10 @@
-doctype html
-html
-  head
-    title= title
-    link(rel='stylesheet', href='/bootstrap/css/bootstrap.min.css')
-    link(rel='stylesheet', href='/bootstrap/css/bootstrap-responsive.min.css')
-    link(rel='stylesheet', href='/stylesheets/style.css')
-    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js')
-    script(src='/bootstrap/js/bootstrap.min.js')
-  body
-    block content
+append styles
+	// Custom styles for this template
+	link(href='../css/starter-template.css', rel='stylesheet')
+block body
+	+navbar-fixed("Project name","navbar","inverse")
+		+nav_item("#","active") Home
+		+nav_item("#") About
+		+nav_item("#") Contact
+	.container
+		.starter-template
